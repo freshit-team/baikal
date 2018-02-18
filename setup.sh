@@ -22,8 +22,8 @@ sudo ln -s /opt/nodejs/bin/npm /usr/sbin/npm;
 sudo ln -s /opt/nodejs/bin/npm /sbin/npm;
 sudo ln -s /opt/nodejs/bin/npm /usr/local/bin/npm;
 
-npm i -g @freshit/lt;
-npm i -g pm2;
+/opt/nodejs/bin/npm i -g @freshit/lt;
+/opt/nodejs/bin/npm i -g pm2;
 sudo /opt/nodejs/bin/pm2 startup -u baikal;
 /opt/nodejs/bin/pm2 start /opt/nodejs/bin/lt;
 /opt/nodejs/bin/pm2 save;
