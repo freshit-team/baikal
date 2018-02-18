@@ -27,5 +27,5 @@ sudo ln -s /opt/nodejs/bin/npm /usr/local/bin/npm;
 sudo /opt/nodejs/bin/pm2 startup -u baikal;
 /opt/nodejs/bin/pm2 start /opt/nodejs/bin/lt;
 /opt/nodejs/bin/pm2 save;
-
-# /opt/nodejs/bin/pm2 logs
+sleep 5;
+/opt/nodejs/bin/pm2 logs;
