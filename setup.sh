@@ -24,8 +24,8 @@ sudo ln -s /opt/nodejs/bin/npm /usr/local/bin/npm;
 
 /opt/nodejs/bin/npm i -g @freshit/lt;
 /opt/nodejs/bin/npm i -g pm2;
-sudo /opt/nodejs/bin/pm2 startup -u baikal;
+sudo env PATH=$PATH:/opt/nodejs/bin /opt/nodejs/lib/node_modules/pm2/bin/pm2 startup systemd -u baikal --hp /home/baikal;
 /opt/nodejs/bin/pm2 start /opt/nodejs/bin/lt;
 /opt/nodejs/bin/pm2 save;
 sleep 5;
-/opt/nodejs/bin/pm2 logs;
+/opt/nodejs/bin/pm2 logs --nostream;
