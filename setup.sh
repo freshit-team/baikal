@@ -2,8 +2,8 @@
 
 wget https://nodejs.org/dist/v9.5.0/node-v9.5.0-linux-armv7l.tar.gz;
 tar -xzf ./node-v9.5.0-linux-armv7l.tar.gz;
-sudo mv node-v9.5.0-linux-armv7l /opt/nodejs;
 sudo rm -rf /opt/nodejs;
+sudo mv node-v9.5.0-linux-armv7l /opt/nodejs;
 sudo unlink /usr/bin/node;
 sudo unlink /usr/sbin/node;
 sudo unlink /sbin/node;
@@ -27,3 +27,5 @@ sudo ln -s /opt/nodejs/bin/npm /usr/local/bin/npm;
 sudo /opt/nodejs/bin/pm2 startup -u baikal;
 /opt/nodejs/bin/pm2 start /opt/nodejs/bin/lt;
 /opt/nodejs/bin/pm2 save;
+
+# /opt/nodejs/bin/pm2 logs
